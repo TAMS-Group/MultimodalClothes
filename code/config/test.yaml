@@ -1,0 +1,36 @@
+model: pointnet_cls  # model name [dgcnn_cls, pointnet_cls]'
+use_cpu: True
+gpu: 0  # specify gpu device
+data_loader_workers: 10
+
+small_data: False
+dataset_portion: 1.0
+validation_split: 0.2
+batch_size: 24  # batch size in training
+epoch: 200  # number of epoch in training
+learning_rate: 0.001  # number of epochs in training
+num_points: 1024
+emb_dims: 1024
+dgcnn_k: 20  # k for dgcnn nearest neighbors
+dropout: 0.5  # dropout for training
+optimizer: Adam  # optimizer for training
+decay_rate: 1e-4  # decay rate
+use_colors: False  # use color information in point cloud processing
+sched_step_size: 20
+sched_gamma: 0.7
+
+data_path: '/run/media/nfiedler/214a284f-5d1a-4897-a171-ef1d07f3ff98/niklas_data'
+samples:
+  - 33
+  - 34
+  - 38
+  - 39
+sample_mappings:
+  33: 0
+  34: 0
+  38: 1
+  39: 1
+modalities:
+#  - DEPTH
+#  - RGB
+  - POINT_CLOUD

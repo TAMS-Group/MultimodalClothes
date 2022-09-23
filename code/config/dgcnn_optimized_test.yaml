@@ -1,0 +1,127 @@
+model: dgcnn_cls  # model name [dgcnn_cls, pointnet_cls, pointnet2_cls_msg]'
+use_cpu: False
+gpu: 0  # specify gpu device
+data_loader_workers: 10
+
+small_data: True
+validation_split: 0.2
+dataset_portion: 1  # portion of the overall dataset to be used
+batch_size: 12  # batch size in training
+epoch: 200  # number of epoch in training
+learning_rate: 0.003  # number of epochs in training
+num_points: 512
+emb_dims: 1024
+dgcnn_k: 15  # k for dgcnn nearest neighbors
+dropout: 0.2  # dropout for training
+optimizer: Adam  # optimizer for training
+decay_rate: 1.25e-6  # decay rate
+use_colors: False  # use color information in point cloud processing
+sched_step_size: 6
+sched_gamma: 0.45
+random_seed: 42
+log_dir: '2022-09-11_02-24'
+tex_out: True
+num_votes: 1
+
+data_path: '/srv/ssd_nvm/dataset/MultiModalClothes/niklas_data'
+
+class_names:
+  - Jacket
+  - Button-Down
+  - Jersey
+  - Hoodie
+  - Sweater
+  - Tee
+  - Jeans
+  - Sweatpants
+  - Shorts
+  - Dress
+  - Skirt
+  - Top
+
+samples:
+#  - 1
+#  - 2
+#  - 4
+###  - 5
+#  - 6
+#  - 8
+#  - 9
+  - 10
+#  - 12
+  - 14
+  - 16
+#  - 18
+#  - 25
+#  - 27
+#  - 28
+  - 29
+#  - 30
+  - 32
+#  - 33
+  - 34
+#  - 35
+##  - 36
+##  - 37
+#  - 38
+  - 39
+#  - 40
+  - 41
+#  - 42
+#  - 43
+#  - 44
+  - 45
+#  - 46
+#  - 47
+  - 48
+#  - 49
+##  - 50
+  - 51
+  - 52
+#  - 53
+#  - 54
+sample_mappings:
+  1 : 6
+  2 : 8
+  4 : 4
+###  5 :
+  6 : 8
+  8 : 1
+  9 : 6
+  10 : 6
+  12 : 9
+  14 : 8
+  16 : 9
+  18 : 0
+  25 : 5
+  27 : 5
+  28 : 0
+  29 : 0
+  30 : 4
+  32 : 5
+  33 : 7
+  34 : 7
+  35 : 2
+##  36 :
+##  37 :
+  38 : 3
+  39 : 3
+  40 : 10
+  41 : 10
+  42 : 11
+  43 : 11
+  44 : 1
+  45 : 1
+  46 : 3
+  47 : 2
+  48 : 4
+  49 : 7
+###  50 :
+  51 : 2
+  52 : 11
+  53 : 9
+  54 : 10
+modalities:
+#   - DEPTH
+#   - RGB
+  - POINT_CLOUD

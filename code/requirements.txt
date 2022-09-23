@@ -1,0 +1,16 @@
+numpy
+torch
+scikit-learn
+optuna
+mysql
+plotly
+kaleido
+tqdm
+pandas
+open3d
+opencv-python
+torchvision
+
+Pillow
+matplotlib
+PyYAML
