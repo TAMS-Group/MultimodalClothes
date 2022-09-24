@@ -2,7 +2,8 @@
 
 ## Data
 
-The dataset itself will be made available to download soon. 
+The dataset itself is available to download as a zip file via https://tams-www.informatik.uni-hamburg.de/download/MultimodalClothes.zip.
+The compressed file has a size of 117GB. 
 
 We provide multimodal recordings of pieces of clothing grasped and rotated by a robot arm. 
 ![](img/modalities.png)
